@@ -201,8 +201,14 @@ class Jobs extends Component {
   )
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="loader">
-      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
+    <div className="loader-container">
+      <Loader
+        testid="loader"
+        type="ThreeDots"
+        color="#0b69ff"
+        height="50"
+        width="50"
+      />
     </div>
   )
 
@@ -361,11 +367,13 @@ class Jobs extends Component {
               />
               <button
                 type="button"
-                estid="earchButton"
                 className="search-button"
                 onClick={this.onSubmitSearchInput}
               >
-                <AiOutlineSearch className="search-icon" />
+                <AiOutlineSearch
+                  testid="searchButton"
+                  className="search-icon"
+                />
               </button>
             </div>
             {this.onRenderJobsStatus()}
